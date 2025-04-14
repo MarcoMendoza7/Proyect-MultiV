@@ -1,72 +1,85 @@
 Bases de Datos;
 
-CREATE TABLE spotify_general (
+CREATE TABLE usuario(
     id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    nombre VARCHAR(25) NOT NULL,
+    apellidos VARCHAR(50) NOT NULL,
+    domicilio VARCHAR(50) NOT NULL,
+    telefono VARCHAR(25) NOT NULL,
+    correo VARCHAR(25) NOT NULL,
+    password VARCHAR(25) NOT NULL
+
+    
+);
+
+
+CREATE TABLE spotify_general (
+    id_generalSpo INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id INT,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
 );
 
 CREATE TABLE spotify_v2 (
-    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    id_Sv2 INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id INT,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
 );
 
 CREATE TABLE spotify_v3 (
-    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    id_Sv3 INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id INT,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
 );
 
 CREATE TABLE spotify_v4 (
-    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    id_Sv4 INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id INT,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
 );
 
 CREATE TABLE spotify_v5 (
-    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    id_Sv5 INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id INT,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
 );
 
 CREATE TABLE spotify_v6 (
-    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    id_Sv6 INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id INT,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
 );
 
 CREATE TABLE spotify_v7 (
-    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    id_Sv7 INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id INT,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
 );
 
 CREATE TABLE spotify_v8 (
-    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    id_Sv8 INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id INT,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
 );
 
 
 
 
 CREATE TABLE max_general (
-    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id_generalMax INT NOT NULL PRIMARY KEY AUTOINCREMENT,
     usuario_id INT,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
 
 CREATE TABLE max_v1 (
-    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    id_Mv1 INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id INT,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
 );
 
 CREATE TABLE max_v2 (
-    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    id_Mv2 INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id INT,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
 );
 
 
@@ -74,20 +87,22 @@ CREATE TABLE max_v2 (
 
 
 CREATE TABLE disney_general (
-    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    id_generalDisney INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id INT,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
 );
 
 CREATE TABLE disney_v1 (
-    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    id_Dv1 INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id INT,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
 );
 
 CREATE TABLE disney_v2 (
-    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
-    usuario_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    id_Dv2 INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id INT,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
 );
+
+
 

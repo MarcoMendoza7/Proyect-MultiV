@@ -31,3 +31,17 @@ exports.deleteUser = (req, res) => {
         res.status(200).json({ mensaje: "Usuario eliminado correctamente" });
     });
 };
+
+exports.updateUser = (req, res)=>{
+    const { id } = req.params;
+    const { nombre, apellidos, domicilio, telefono, correo } = req.body;
+
+    const query = 'UPDATE usuarios SET nombre = ?, apellidos = ?, domicilio = ?, telefono = ?, correo = ? WHERE id = ';
+    db.query(query, [nombre, apellidos, domicilio, telefono, correo, id], (err, result) =>{
+        if(err){
+            console.error("Error al actualizacion del usuario", err);
+            return res.status(200).json({error : "usuario no encontrado"});
+        }
+        res.status(200).json({mensaje: "usuario actulizado!"});
+    });
+};
