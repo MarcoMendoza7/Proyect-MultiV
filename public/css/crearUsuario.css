@@ -1,0 +1,119 @@
+/* Reset básico para el margen y padding de todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo gris claro para toda la página */
+body {
+    background-color: #f4f7fb;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    width: 100%;
+    max-width: 200px;
+    padding: 220px;
+}
+
+/* Estilo del formulario */
+.form-container {
+    background-color: white;
+    padding: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4A90E2;
+}
+
+/* Estilo de las etiquetas de los campos */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Estilo de los campos de texto */
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+/* Estilo de los campos al hacer foco */
+input:focus, select:focus {
+    border-color: #4A90E2;
+}
+
+/* Estilo para el botón */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4A90E2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto de hover para el botón */
+.submit-btn:hover {
+    background-color: #357ABD;
+}
+
+/* Estilo para el enlace de volver al menú */
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #4A90E2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+
+button {
+    color: white;
+    border-radius: 8px;
+    width: 150px;
+    padding: 5px;
+    background: #4A90E2;
+    transform: translate(70px, 15px);
+
+}
+#CrearUsuario:hover{
+    background: red;
+    
+}
+
+#Menu{
+    background: #f47f;
+}
+#Menu:hover{
+    background-color: orange;
+}
