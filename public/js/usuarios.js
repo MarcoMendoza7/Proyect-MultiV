@@ -3,15 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuLinks = document.querySelectorAll('a[data-tabla]');
     menuLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();  // Prevenir que la página se recargue
-            const tabla = e.target.getAttribute('data-tabla');  // Obtener el nombre de la tabla
-            cargarTabla(tabla);  // Cargar la tabla correspondiente
+            e.preventDefault();
+            const tabla = e.target.getAttribute('data-tabla');
+        
+            if (tabla === "clientesTotales") {
+                cargarClientesTotales();  // Tabla general
+            } else {
+                cargarTabla(tabla);       // Tabla específica
+            }
+        
             actualizarActivo(tabla);
         });
+        
     });
 
-    // Cargar la tabla de Clientes Totales de forma estática
-    cargarClientesTotales();
+   
 
     // Función para cargar la tabla estática de "Clientes Totales"
     const cargarClientesTotales = async () => {
@@ -43,7 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error al obtener los usuarios:", error);
         }
     };
-
+     // Cargar la tabla de Clientes Totales de forma estática
+     cargarClientesTotales();
     // Función para cargar la tabla dinámica
     const cargarTabla = async (tabla) => {
         try {
@@ -113,3 +120,30 @@ function eliminarUsuario(id) {
 function editarUsuario(id) {
     window.location.href = `editarUsuario.html?id=${id}`;
 }
+
+const editar_usuario = dispatchEvent.getElementById('usuario.id'[id]);
+function editarUsuario(id, datosActualizados) {
+    if (confirm("¿Estás seguro de actualizar este usuario?")) {
+        fetch(`http://localhost:3000/usuarios/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(datosActualizados)
+        })
+        .then(response => {
+            if (!response.ok) throw new Error("Error al actualizar usuario");
+            return response.json();
+        })
+        .then(() => {
+            alert("Usuario actualizado correctamente");
+            location.reload();
+        })
+        .catch(error => {
+            console.error(error);
+            alert("Error al actualizar el usuario");
+        });
+    }
+}
+
+
