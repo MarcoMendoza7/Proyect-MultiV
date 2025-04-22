@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Usuario</title>
+    <link rel="stylesheet" href="/public/css/crearUsuario.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Crear Nuevo Usuario</h2>
+        <form id="formUsuario">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required>
+
+            <label>Apellidos:</label>
+            <input type="text" name="apellidos" required>
+
+            <label>Domicilio:</label>
+            <input type="text" name="domicilio" required>
+
+            <label>Teléfono:</label>
+            <input type="tel" name="telefono" required>
+
+            <label>Correo:</label>
+            <input type="email" name="correo" required>
+
+            <label>Contraseña:</label>
+            <input type="password" name="password" required>
+
+            <label>Plataforma:</label>
+            <select name="plataforma" required>
+                <option value="">Selecciona una</option>
+                <option value="spotify v1">Spotify v1</option>
+                <option value="spotify v2">Spotify v2</option>
+                <option value="spotify v3">Spotify v3</option>
+                <option value="spotify v4">Spotify v4</option>
+                <option value="spotify v5">Spotify v5</option>
+                <option value="spotify v6">Spotify v6</option>
+                <option value="spotify v7">Spotify v7</option>
+            
+                <option value="max v1">Max v1</option>
+                <option value="max v2">Max v2</option>
+            
+                <option value="disney v1">Disney v1</option>
+                <option value="disney v2">Disney v2</option>
+            </select>
+            
+
+            <button id="CrearUsuario" type="submit">Registrar Usuario</button>
+        </form>
+        <br>
+        <button onclick="location.href='Registros.html'" id="Menu" href="menuPrincipal.html"> ← Volver al Menú Principal</button>
+    </div>
+
+    <script src="/public/js/crearUsuario.js"></script>
+</body>
+</html>
