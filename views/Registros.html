@@ -11,8 +11,12 @@
         <header>
             <h1>MySubs</h1>
             <nav>
+        <button onclick="location.href= 'index.html' " id="salir" class="text-white underline">Volver al Inicio</button>
+
                 <ul>
-                    <li><a href="#" class="active" id="clientesTotales">Clientes Totales</a></li>
+                    <button>Administrar Usuarios</button>
+                    <button onclick="location.href='crearUsuario.html'">Crear Usuarios</button>
+                    <li><a href="#" class="active" id="clientesTotales" data-tabla="clientesTotales">Clientes Totales</a></li>
                     <li><a href="#" data-tabla="spotify">Spotify</a></li>
                     <li><a href="#" data-tabla="max">Max</a></li>
                     <li><a href="#" data-tabla="disney">Disney</a></li>
@@ -42,7 +46,6 @@
             </table>
         </main>
         <br>
-        <a href="index.html" class="text-white underline">Volver al Inicio</a>
     </div>
     <script src="/public/js/usuarios.js"></script>
 </body>
